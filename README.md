@@ -4,8 +4,7 @@ The project is structured into three distinct layers of analysis, moving from hi
 
 ---
 
-![image alt]https://github.com/Abhi-Git44u/Bank-Loan-Analysis-Project/blob/3f6400594fdacb7b684e8cc45209fa145825fb48/Quick%20Images/Summary_Dashboard.png
-
+![image alt](Quick Images/Summary_Dashboard.png)
 ### 1. Executive Summary Dashboard
 **Focus:** Financial Health & Portfolio Performance
 
