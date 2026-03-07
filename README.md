@@ -25,7 +25,7 @@ The Summary dashboard provides a consolidated view of the bank's lending efficie
 
 ---
 
-![image alt]
+![image alt](https://github.com/Abhi-Git44u/Bank-Loan-Analysis-Project/blob/30c7605a244bb7a9ef7636acf3c284cbe030969b/Quick%20Images/Overview_Dashboard.png)
 
 
 ### 2. Trends & Overview Dashboard
