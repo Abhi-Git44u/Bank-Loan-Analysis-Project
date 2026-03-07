@@ -25,6 +25,9 @@ The Summary dashboard provides a consolidated view of the bank's lending efficie
 
 ---
 
+![image alt]
+
+
 ### 2. Trends & Overview Dashboard
 **Focus:** Pattern Recognition & Borrower Demographics
 
