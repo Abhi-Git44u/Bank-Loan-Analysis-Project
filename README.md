@@ -48,6 +48,7 @@ The Overview dashboard transitions from financial numbers to behavioral patterns
     * **Employment Length:** Analyzes the correlation between job stability and loan volume. Borrowers with **10+ years of experience** are the most active, representing a more stable borrower segment.
 
 ---
+![image alt](https://github.com/Abhi-Git44u/Bank-Loan-Analysis-Project/blob/a6a72502239b746308788646d5628edcca616b73/Quick%20Images/Details_Dashboard.png)
 
 ### 3. Details Dashboard
 **Focus:** Granular Auditing & Tactical Reporting
