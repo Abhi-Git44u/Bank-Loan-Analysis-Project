@@ -79,24 +79,23 @@ The Details dashboard acts as the "Source of Truth." While the previous dashboar
 Below is the comprehensive list of DAX formulas used to calculate the KPIs and time-intelligence metrics.
 
 ```dax
--- 1. PRIMARY KPIs
+1. PRIMARY KPIs
 Total Loan Applications = COUNT('Bank Loan Dataset (1)'[id])
 Total Funded Amount = SUM('Bank Loan Dataset (1)'[loan_amount])
 Total Amount Received = SUM('Bank Loan Dataset (1)'[total_payment])
 Avg Interest Rate = AVERAGE('Bank Loan Dataset (1)'[int_rate])
 Avg DTI = AVERAGE('Bank Loan Dataset (1)'[dti])
-
--- 2. TIME INTELLIGENCE (MTD)
+2. TIME INTELLIGENCE (MTD)
 MTD Loan Applications = TOTALMTD([Total Loan Applications], 'DateTable'[Date])
 MTD Funded Amount = TOTALMTD([Total Funded Amount], 'DateTable'[Date])
 MTD Amount Received = TOTALMTD([Total Amount Received], 'DateTable'[Date])
 
--- 3. MONTH-OVER-MONTH (MoM) GROWTH
+3. MONTH-OVER-MONTH (MoM) GROWTH
 MoM Applications % = 
 VAR _prev_month = CALCULATE([Total Loan Applications], DATEADD('DateTable'[Date], -1, MONTH))
 RETURN DIVIDE([MTD Loan Applications] - _prev_month, _prev_month, 0)
 
--- 4. GOOD VS BAD LOAN LOGIC
+4. GOOD VS BAD LOAN LOGIC
 Good Loan % = DIVIDE(CALCULATE([Total Loan Applications], 'Bank Loan Dataset (1)'[loan_status] IN {"Fully Paid", "Current"}), [Total Loan Applications])
 Bad Loan % = DIVIDE(CALCULATE([Total Loan Applications], 'Bank Loan Dataset (1)'[loan_status] = "Charged Off"), [Total Loan Applications])
 Good Loan Funded Amount = CALCULATE([Total Funded Amount], 'Bank Loan Dataset (1)'[loan_status] IN {"Fully Paid", "Current"})
