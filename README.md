@@ -4,6 +4,8 @@ The project is structured into three distinct layers of analysis, moving from hi
 
 ---
 
+![image alt]
+
 ### 1. Executive Summary Dashboard
 **Focus:** Financial Health & Portfolio Performance
 
