@@ -85,6 +85,7 @@ Total Funded Amount = SUM('Bank Loan Dataset (1)'[loan_amount])
 Total Amount Received = SUM('Bank Loan Dataset (1)'[total_payment])
 Avg Interest Rate = AVERAGE('Bank Loan Dataset (1)'[int_rate])
 Avg DTI = AVERAGE('Bank Loan Dataset (1)'[dti])
+
 2. TIME INTELLIGENCE (MTD)
 MTD Loan Applications = TOTALMTD([Total Loan Applications], 'DateTable'[Date])
 MTD Funded Amount = TOTALMTD([Total Funded Amount], 'DateTable'[Date])
@@ -100,4 +101,49 @@ Good Loan % = DIVIDE(CALCULATE([Total Loan Applications], 'Bank Loan Dataset (1)
 Bad Loan % = DIVIDE(CALCULATE([Total Loan Applications], 'Bank Loan Dataset (1)'[loan_status] = "Charged Off"), [Total Loan Applications])
 Good Loan Funded Amount = CALCULATE([Total Funded Amount], 'Bank Loan Dataset (1)'[loan_status] IN {"Fully Paid", "Current"})
 Bad Loan Received Amount = CALCULATE([Total Amount Received], 'Bank Loan Dataset (1)'[loan_status] = "Charged Off")
-  
+```
+# 📈 Project Outcomes & Key Insights
+
+This section outlines the business intelligence derived from the analysis of **38.6K** loan applications. These insights provide a roadmap for risk management and strategic growth.
+
+---
+
+### 1. Portfolio Health & Risk Assessment
+* **High Retention of "Good Loans":** The analysis reveals a robust portfolio where **86.2%** of loans are classified as "Good" (Fully Paid or Current), ensuring a steady stream of interest income.
+* **Default Rate Monitoring:** The "Bad Loan" rate is identified at **13.8%**, representing **$65.5M** in funded capital at risk (Charged Off). This allows the credit risk team to proactively tighten lending criteria for high-risk segments.
+* **Recovery Efficiency:** Despite defaults, the bank successfully recovered **$37.3M** from "Bad Loans," demonstrating an effective collection and recovery process.
+
+
+
+---
+
+### 2. Strategic Lending Trends
+* **Steady Growth:** Month-over-Month (MoM) analysis indicates a **6.9% increase** in loan applications, signaling strong market demand and the need for scalable processing.
+* **Seasonal Peaks:** Lending activity shows a consistent upward trajectory toward the end of the year, peaking in **December (4.3K applications)**. This correlates with increased consumer borrowing during the holiday season.
+
+---
+
+### 3. Borrower Profile Analysis
+* **Primary Loan Driver:** **Debt Consolidation** is the leading motivation for borrowing, accounting for nearly **18K applications**. This identifies a significant opportunity for the bank to develop specialized refinancing products.
+* **Home Ownership & Stability:** * **Renters (18K)** and **Mortgage holders (17K)** form the bulk of the applicant pool.
+    * Borrowers with **10+ years of employment** history represent the largest and most stable segment (**8.9K applicants**), suggesting a lower risk profile for long-term employees.
+
+
+
+---
+
+### 4. Operational Efficiency
+* **Loan Term Preference:** Approximately **73% of borrowers** opt for **36-month terms** over 60-month terms, showing a clear market preference for shorter-term debt obligations.
+* **Geographical Concentration:** California (CA), Texas (TX), and New York (NY) emerged as the top markets by volume. This data allows for targeted regional marketing and localized risk adjustments.
+
+
+
+---
+
+## 🚀 Impact on Decision Making
+
+The implementation of these dashboards directly empowers the organization to:
+
+1.  **Reduce Loss:** Drill down into high-risk "Grades" (e.g., Grade G) to adjust interest rates or increase approval stringency.
+2.  **Optimize Marketing:** Align advertising budgets with the top 5 performing states and the most common loan purposes (Debt Consolidation).
+3.  **Forecast Liquidity:** Utilize **MTD** and **MoM** trends to ensure the bank maintains sufficient cash reserves to meet fluctuating loan demands.
